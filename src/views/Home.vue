@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--<div id="read"></div>-->
+    <span class="icon-clock"></span>
+    <span class="text">adsadf</span>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  // @ is an alias to /src
+  import Epub from 'epubjs'
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  global.ePub = Epub
+  export default {
+    name: 'home',
+    components: {},
+    mounted () {
+
+    }
   }
-}
 </script>
+<style scoped>
+.icon-clock {
+  font-size: 20px;
+  color: red;
+}
+  .text {
+    font-family: "Days One";
+    font-size: 20px;
+  }
+</style>
